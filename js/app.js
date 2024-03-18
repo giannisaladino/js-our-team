@@ -47,3 +47,5 @@ const membersInfo = [
     }
 
 // 3 - stampo tutto sul dom
+
+const containerElement = document.querySelector('.container');
