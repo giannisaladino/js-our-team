@@ -1,5 +1,6 @@
 //Creare un array di oggetti per rappresentare i membri del team
 
+const containerElement = document.querySelector('.container');
 // 1 - creo l'array di oggetti
 const membersInfo = [
     {
@@ -43,9 +44,17 @@ const membersInfo = [
         const teamMembersName = membersInfo[i].name;
         const teamMembersRole = membersInfo[i].role;
         const teamMembersPhoto = membersInfo[i].photo;
-        console.log('Il nome del membro è: ' + teamMembersName + ',', 'il suo ruolo è: ' + teamMembersRole + ',',teamMembersPhoto);
+        // console.log('Il nome del membro è: ' + teamMembersName + ',', 'il suo ruolo è: ' + teamMembersRole + ',',teamMembersPhoto);
+
+        // 3 - stampo tutto sul dom
+        containerElement.innerHTML += `
+            <div class="card">
+                <img src="./img/${teamMembersPhoto}" alt="">
+                <p> ${teamMembersName}</p>
+                <p> ${teamMembersRole} </p>
+            </div>
+        `
     }
 
-// 3 - stampo tutto sul dom
 
-const containerElement = document.querySelector('.container');
+
