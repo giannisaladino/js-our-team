@@ -35,7 +35,7 @@ const membersInfo = [
 ]
 
 // console.log(teamMember);
-const containerElement = document.querySelector('.container');
+const rowElement = document.querySelector('.row');
 
 // 2 - stampo su console per ogni membro il nome, ruolo e la stringa della foto
 // creo un ciclo che mi iteri tutti gli elementi dell'array
@@ -47,7 +47,8 @@ for (let i = 0; i < membersInfo.length; i++) {
     // console.log('Il nome del membro è: ' + teamMembersName + ',', 'il suo ruolo è: ' + teamMembersRole + ',',teamMembersPhoto);
 
     // 3 - stampo tutto sul dom
-    containerElement.innerHTML += `
+    rowElement.innerHTML += `
+    <div class="col-4">
         <div class="card">
                 <img src="./img/${teamMembersPhoto}" class="card-img-top">
             <div class="card-body">
@@ -55,6 +56,7 @@ for (let i = 0; i < membersInfo.length; i++) {
                 <p class="card-text">${teamMembersRole}</p>
             </div>
         </div>
+    </div>
     `
 }
 
