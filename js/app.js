@@ -1,7 +1,7 @@
 //Creare un array di oggetti per rappresentare i membri del team
 
 // 1 - creo l'array di oggetti
-const teamMember = [
+const membersInfo = [
     {
         name: 'Wayne Barnett',
         role: 'Founder & CEO',
@@ -34,7 +34,16 @@ const teamMember = [
     }, 
 ]
 
-console.log(teamMember);
+// console.log(teamMember);
 
 // 2 - stampo su console per ogni membro il nome, ruolo e la stringa della foto
+    // creo un ciclo che mi iteri tutti gli elementi dell'array
+    for(let i = 0; i < membersInfo.length; i++) {
+
+        const teamMembersName = membersInfo[i].name;
+        const teamMembersRole = membersInfo[i].role;
+        const teamMembersPhoto = membersInfo[i].photo;
+        console.log('Il nome del membro è: ' + teamMembersName + ',', 'il suo ruolo è: ' + teamMembersRole + ',',teamMembersPhoto);
+    }
+
 // 3 - stampo tutto sul dom
